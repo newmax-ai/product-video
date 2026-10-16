@@ -1,0 +1,11 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>产品视频重叠检查回归</title>
+<style>body{margin:0;font:14px sans-serif}pre{white-space:pre-wrap;padding:16px}</style>
+<pre id="result">运行本地 DOM 回归测试…</pre>
+<script src="../overlap_check.js?v=coverage-v3-2"></script>
+<script src="overlap_cases.js?v=coverage-v3-2"></script>
+<script>
+window.testResult = window.runOverlapCases();
+document.querySelector('#result').textContent = JSON.stringify(window.testResult, null, 2);
+</script>

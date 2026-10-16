@@ -1,0 +1,20 @@
+{
+  "port": 9222,
+  "match": "localhost",
+  "outDir": "../src/captured",
+  "replaceText": [
+    ["张三的工作区", "个人"],
+    ["acme-internal", "示例工作室"]
+  ],
+  "replaceSubstring": [
+    ["zhangsan@acme.com", "demo@example.com"]
+  ],
+  "keepImages": ["img.cm-widgetBuffer", "img[data-generated-icon]"],
+  "forbid": ["张三", "zhangsan", "acme"],
+  "jobs": [
+    { "name": "shell", "selector": "#app-root", "remove": ["[data-debug-panel]"], "transform": "transforms/shell.js" },
+    { "name": "menus", "selector": "[role=menu]", "all": true, "visibleOnly": true },
+    { "name": "settingsTheme", "selector": "[data-settings-section=theme]" }
+  ],
+  "runtimeStyles": { "name": "runtimeStyles", "contains": "cm-" }
+}

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product Video · 制作链路验收夹具</title>
+<style>
+body{margin:0;background:#17212b;color:#edf2f5;font:15px system-ui,sans-serif}canvas{display:block}main{max-width:640px;margin:24px auto}button,input{font:inherit;padding:8px 12px}label{display:block;margin:12px 0}.note{color:#b8c6d1;line-height:1.6}#status{white-space:pre-wrap}
+</style>
+<canvas id="film" width="640" height="360" aria-label="12 秒程序化验收样片"></canvas>
+<main>
+<p class="note">仅用于验证时间轴、3D→2D、帧导出和编码。画面是程序化测试夹具，不是客户案例或真实产品演示；无音乐，无外部素材。</p>
+<label>时间 <input id="time" type="range" min="0" max="12" step="0.033333" value="0"></label>
+<button id="result">查看完成状态</button>
+<button id="export">导出 360 帧（需参考验收服务器）</button>
+<pre id="status">加载本地资源…</pre>
+</main>
+<script type="module" src="./film.mjs"></script>
+</html>

@@ -1,0 +1,8 @@
+{
+  "text": "#type .t",
+  "ui": "#ui > [data-ui-frame]",
+  "decor": "[data-decor]",
+  "optionalSources": [],
+  "minOpacity": 0.02,
+  "pad": 0
+}

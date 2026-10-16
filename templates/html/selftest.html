@@ -1,0 +1,27 @@
+<!doctype html><meta charset="utf-8"><title>参考工程自检</title>
+<style>body{font:16px system-ui;margin:24px;background:#edf2f5}iframe{width:680px;height:440px;border:0}button{padding:12px;font:inherit}pre{white-space:pre-wrap}</style>
+<p>只检查本页内的程序化参考工程，不访问真实产品或账号。</p>
+<button id="run">运行状态与确定性自检</button><pre id="result">等待运行</pre>
+<iframe id="film" src="./film.html"></iframe>
+<script>
+window.referenceTestResult={status:'idle'};
+document.querySelector('#run').onclick=async()=>{
+ const w=document.querySelector('#film').contentWindow;
+ if(!w.__ready){document.querySelector('#result').textContent='参考工程尚未就绪';return;}
+ const result={status:'running',states:[],deterministic:false,handoff:{manualReviewRequired:true}};
+ window.referenceTestResult=result;
+ try{
+  for(const t of [0,4,9]){await w.seek(t);result.states.push(JSON.parse(JSON.stringify(w.demoState)));}
+  const c=w.document.querySelector('#film');
+  await w.seek(9);const a=c.toDataURL();await w.seek(2);await w.seek(9);
+  result.deterministic=a===c.toDataURL();
+  w.__noDOM=true;await w.seek(8);const p=c.getContext('2d').getImageData(0,0,640,360).data;
+  w.__noDOM=false;await w.seek(8);const q=c.getContext('2d').getImageData(0,0,640,360).data;
+  let changed=0,sum=0,max=0;
+  for(let i=0;i<p.length;i+=4){let d=0;for(let k=0;k<3;k++){const v=Math.abs(p[i+k]-q[i+k]);sum+=v;d=Math.max(d,v);max=Math.max(max,v);}if(d)changed++;}
+  result.handoff={executed:true,changedPixels:changed,maxChannelDiff:max,meanAbsChannelDiff:sum/(640*360*3),manualReviewRequired:true,scope:'3D-to-2D-canvas-not-DOM-export'};
+  result.status=result.deterministic&&result.states[0].complete===false&&result.states[1].layer==='3d'&&result.states[2].complete===true&&result.states[2].layer==='2d'?'pass':'failed';
+ }catch(e){result.status='failed';result.error=String(e);}
+ finally{w.__noDOM=false;await w.seek(9);document.querySelector('#result').textContent=JSON.stringify(result,null,2);}
+};
+</script>

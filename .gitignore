@@ -1,0 +1,25 @@
+# 本地依赖与缓存
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# 本地凭据与编辑器配置
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+
+# 生成的工程、视频帧与报告
+/out/
+/dist/
+/frames/
+/capture/
+/logs/
+/outputs/
+*.log
+*.skill

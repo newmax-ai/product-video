@@ -1,0 +1,36 @@
+{
+  "name": "product-video-spatial-template",
+  "private": true,
+  "license": "Apache-2.0",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "studio": "remotion studio index.tsx",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "still": "remotion still index.tsx SpatialDemo out/spatial-poster.png --frame=150 --gl=angle",
+    "render": "remotion render index.tsx SpatialDemo out/spatial-demo.mp4 --gl=angle --concurrency=2",
+    "render:portrait": "remotion render index.tsx SpatialPortrait out/spatial-portrait.mp4 --gl=angle --concurrency=2"
+  },
+  "dependencies": {
+    "@react-three/drei": "10.7.9",
+    "@react-three/fiber": "9.8.1",
+    "@remotion/three": "4.0.534",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.534",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@remotion/cli": "4.0.534",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "@vitest/coverage-v8": "5.0.3",
+    "typescript": "7.0.2",
+    "vitest": "5.0.3",
+    "vite": "8.3.3"
+  }
+}
