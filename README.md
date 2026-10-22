@@ -6,6 +6,16 @@ Product Video 是供 AI 助手使用的 Skill，包含制作方法、工程模�
 
 它不是独立视频编辑器，也不是安装即自动出片的在线服务。适合能够配置本地制作环境的产品团队、独立开发者和创作者。
 
+## 用这个 Skill 做出来的宣传片
+
+**为你的产品，做这样的视频。** 下面的宣传片与海报由 Product Video Skill 制作。
+
+[![Product Video 宣传片海报：为你的产品，做这样的视频。](assets/promo/product-video-promo-v3-poster.png)](assets/promo/product-video-promo-v3.mp4?raw=true)
+
+**[▶ 打开或下载完整宣传片](assets/promo/product-video-promo-v3.mp4?raw=true)** · 约 61 秒 · 1080p · 30fps · MP4（约 12.9 MB）
+
+点击海报也可打开视频；播放或下载行为取决于浏览器。片中品牌均为虚构演示，不代表真实客户案例或产品性能承诺。
+
 ## 能做什么
 
 - **先设计再制作**：用 2–3 个方向及代表性静帧比较构图、密度、空间、材质和镜头，不只是换配色。
@@ -109,6 +119,7 @@ node "$SKILL_DIR/scripts/preflight.mjs" --project "$PROJECT" --mode managed
 
 ```text
 SKILL.md       工作流入口
+assets/promo/  宣传片与展示海报
 formats/       五种片型的节奏与验收规则
 references/    美术方向、真实 UI、动效、空间与验收指南
 scripts/       初始化、预检、采集、渲染及报告工具
