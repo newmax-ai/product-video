@@ -10,11 +10,15 @@ Product Video 是供 AI 助手使用的 Skill，包含制作方法、工程模�
 
 **为你的产品，做这样的视频。** 下面的宣传片与海报由 Product Video Skill 制作。
 
-[![Product Video 宣传片海报：为你的产品，做这样的视频。](assets/promo/product-video-promo-v3-poster.png)](assets/promo/product-video-promo-v3.mp4?raw=true)
+![Product Video 宣传片海报：为你的产品，做这样的视频。](assets/promo/product-video-promo-v3-poster.png)
 
-**[▶ 打开或下载完整宣传片](assets/promo/product-video-promo-v3.mp4?raw=true)** · 约 61 秒 · 1080p · 30fps · MP4（约 12.9 MB）
+https://github.com/user-attachments/assets/749fba74-2a3c-467b-b679-a792f8485855
 
-点击海报也可打开视频；播放或下载行为取决于浏览器。片中品牌均为虚构演示，不代表真实客户案例或产品性能承诺。
+**点击上方播放器即可观看** · 约 61 秒 · 1080p · 30fps · 在线播放版约 6.4 MB
+
+[下载原版 MP4（约 12.9 MB）](https://raw.githubusercontent.com/newmax-ai/product-video/main/assets/promo/product-video-promo-v3.mp4)
+
+在线播放版经过压缩，原版文件保持不变。GitHub 播放器默认静音，可点击音量按钮开启声音。片中品牌均为虚构演示，不代表真实客户案例或产品性能承诺。
 
 ## 能做什么
 
